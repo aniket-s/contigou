@@ -46,7 +46,7 @@ const ContactUsPage = () => {
                     {submitted ? (
                         <div className="text-center">
                             <div className="mb-4 text-green-500 text-xl">Thank you for your message!</div>
-                            <p className="mb-6 text-gray-600">We'll get back to you as soon as possible.</p>
+                            <p className="mb-6 text-gray-600">We&apos;ll get back to you as soon as possible.</p>
                             <button
                                 onClick={() => {
                                     setSubmitted(false);

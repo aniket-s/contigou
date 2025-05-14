@@ -28,7 +28,7 @@ const PrivacyPolicy: React.FC = () => {
                         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
                             <div className="px-4 py-5 sm:p-6 prose max-w-none">
                                 <p className="text-gray-700 mb-4">
-                                    Please read this privacy policy ("Privacy Policy") below before using this website.
+                                    Please read this privacy policy (&quot;Privacy Policy&quot;) below before using this website.
                                 </p>
 
                                 <p className="text-gray-700 mb-6">
@@ -54,7 +54,7 @@ const PrivacyPolicy: React.FC = () => {
                                 </p>
 
                                 <p className="text-gray-700 mb-4">
-                                    We may collect information in the form of website server logs. These logs are files that record activity on the website and gather statistics about users' activities, such as:
+                                    We may collect information in the form of website server logs. These logs are files that record activity on the website and gather statistics about users&apos; activities, such as:
                                 </p>
 
                                 <ol className="list-decimal ml-6 mb-6 space-y-1 text-gray-700">
@@ -62,14 +62,14 @@ const PrivacyPolicy: React.FC = () => {
                                     <li>how often;</li>
                                     <li>how many hits the website and a particular webpage has received;</li>
                                     <li>sign-in and sign-off times for the website;</li>
-                                    <li>type and quality of the user's Internet connection to the website;</li>
-                                    <li>identification of the user's hardware and software accessing the website;</li>
+                                    <li>type and quality of the user&apos;s Internet connection to the website;</li>
+                                    <li>identification of the user&apos;s hardware and software accessing the website;</li>
                                     <li>the features on the website you used;</li>
                                     <li>the frequency of use.</li>
                                 </ol>
 
                                 <p className="text-gray-700 mb-6">
-                                    The entries comprising the logs contain IP addresses, user IDs, and identification of the Internet service provider that provides your connection to the Internet. Generally, we use the Logs to operate and improve the website, to identify the popularity of certain features, to assist with internal marketing and demographic studies, to enable us to assess overall efficiency and activity on the website, and to assess users' web-browsing activities, preferences, and habits. We also use the logs to monitor traffic on the website and to troubleshoot technical problems.
+                                    The entries comprising the logs contain IP addresses, user IDs, and identification of the Internet service provider that provides your connection to the Internet. Generally, we use the Logs to operate and improve the website, to identify the popularity of certain features, to assist with internal marketing and demographic studies, to enable us to assess overall efficiency and activity on the website, and to assess users&apos; web-browsing activities, preferences, and habits. We also use the logs to monitor traffic on the website and to troubleshoot technical problems.
                                 </p>
 
                                 <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -90,14 +90,14 @@ const PrivacyPolicy: React.FC = () => {
                                     Do we use cookies?
                                 </h2>
                                 <p className="text-gray-700 mb-6">
-                                    Yes cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the sites or service providers systems to recognize your browser and capture and remember certain information. We use cookies to compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. You may choose to set your browser to refuse cookies, or to alert you when cookies are being sent. If you do, please note that some parts of the website may not function properly.
+                                    Yes cookies are small files that a site or its service provider transfers to your computer&apos;s hard drive through your Web browser (if you allow) that enables the sites or service providers systems to recognize your browser and capture and remember certain information. We use cookies to compile aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in the future. You may choose to set your browser to refuse cookies, or to alert you when cookies are being sent. If you do, please note that some parts of the website may not function properly.
                                 </p>
 
                                 <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
                                     Do we disclose any information to outside parties?
                                 </h2>
                                 <p className="text-gray-700 mb-6">
-                                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect our or others' rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
+                                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect our or others&apos; rights, property, or safety. However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
                                 </p>
 
                                 <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
@@ -108,17 +108,17 @@ const PrivacyPolicy: React.FC = () => {
                                 </p>
 
                                 <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
-                                    Children's Online Privacy Protection Act Compliance
+                                    Children&apos;s Online Privacy Protection Act Compliance
                                 </h2>
                                 <p className="text-gray-700 mb-6">
-                                    We are in compliance with the requirements of COPPA (Children's Online Privacy Protection Act), we do not collect any information from anyone under 13 years of age. Our website, products and services are all directed to people who are at least 13 years old or older.
+                                    We are in compliance with the requirements of COPPA (Children&apos;s Online Privacy Protection Act), we do not collect any information from anyone under 13 years of age. Our website, products and services are all directed to people who are at least 13 years old or older.
                                 </p>
 
                                 <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">
                                     California Privacy Rights Under California Civil Code Section 1798.83
                                 </h2>
                                 <p className="text-gray-700 mb-4">
-                                    If you are a resident of California, in addition to the rights set forth in this Privacy Policy, you generally have the right to request information from us regarding the manner in which we share certain categories of personal information with third parties for their direct marketing purposes. However, under the law, a business is not required to provide this information if it adopts and discloses to the public in its privacy policy a practice of not disclosing a user's personal information to third parties for their direct marketing purposes unless the user first affirmatively agrees to the disclosure. Rather, the business may comply with the law by notifying California users of their rights to prevent disclosure of personal information and providing a cost free means to exercise that right.
+                                    If you are a resident of California, in addition to the rights set forth in this Privacy Policy, you generally have the right to request information from us regarding the manner in which we share certain categories of personal information with third parties for their direct marketing purposes. However, under the law, a business is not required to provide this information if it adopts and discloses to the public in its privacy policy a practice of not disclosing a user&apos;s personal information to third parties for their direct marketing purposes unless the user first affirmatively agrees to the disclosure. Rather, the business may comply with the law by notifying California users of their rights to prevent disclosure of personal information and providing a cost free means to exercise that right.
                                 </p>
 
                                 <p className="text-gray-700 mb-4">
@@ -126,7 +126,7 @@ const PrivacyPolicy: React.FC = () => {
                                 </p>
 
                                 <p className="text-gray-700 mb-4">
-                                    Please note that whenever you opt-in to receive future communications from a third party, your information will be subject to the third party's privacy policy. If you later decide that you do not want that third party to use your information, you will need to contact the third party directly, as we have no control over how third parties use your information. You should always review the privacy policy of any party that collects your information to determine how that entity will handle your information.
+                                    Please note that whenever you opt-in to receive future communications from a third party, your information will be subject to the third party&apos;s privacy policy. If you later decide that you do not want that third party to use your information, you will need to contact the third party directly, as we have no control over how third parties use your information. You should always review the privacy policy of any party that collects your information to determine how that entity will handle your information.
                                 </p>
 
                                 <p className="text-gray-700 mb-6">
