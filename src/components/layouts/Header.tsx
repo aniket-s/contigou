@@ -50,7 +50,7 @@ export default function Header() {
                                     src="/cont-logo.png"
                                     alt="ContigoU Logo"
                                     width="140" height="60"
-                                    className={`h-12 transition-all duration-300 ${scrolled ? 'h-10' : 'h-12'}`}
+                                    className={` transition-all duration-300 `}
                                 />
                                 <p className="text-gray-600 text-xs hidden sm:block transition-opacity duration-300 hover:text-teal-600">
                                     Connecting Patients to Healthcare Solutions

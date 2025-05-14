@@ -14,21 +14,11 @@ export default function HeroSection() {
         // Here you would typically redirect to search results page
     };
 
-    return (
-        <section className="pt-10 md:pt-4 px-5 text-center relative overflow-hidden">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/landing-img.png"
-                    alt="Healthcare background"
-                    fill
-                    priority
-                    className="object-cover"
-                />
-                {/* Overlay to ensure text readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-50/90 to-blue-100/80"></div>
-            </div>
 
+    return (
+        <section
+            className="bg-[#8cccf4] pt-10 md:pt-4 px-5 text-center relative overflow-hidden flex flex-col justify-center"
+        >
             {/* Content (now with z-10 to position above the background) */}
             <div className="relative z-10">
                 <div className="inline-block bg-white/80 text-primary px-5 py-2 rounded-full text-sm font-medium shadow-sm mb-6">
@@ -86,66 +76,14 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                <div className="relative max-w-6xl mx-auto">
-                    {/* Circular images */}
-                    <div className="hidden md:block absolute w-28 h-24 lg:w-28 lg:h-28 rounded-full border-4 border-white shadow-lg overflow-hidden top-[0%] left-[10%] lg:left-[15%]">
-                        <Image
-                            src="https://www.claudeusercontent.com/api/placeholder/150/150"
-                            alt="Healthcare professional"
-                            width={150}
-                            height={150}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
-                    <div className="hidden md:block absolute w-28 h-24 lg:w-28 lg:h-28 rounded-full border-4 border-white shadow-lg overflow-hidden bottom-[10%] left-[23%] z-10">
-                        <Image
-                            src="https://www.claudeusercontent.com/api/placeholder/150/150"
-                            alt="Dental patient"
-                            width={150}
-                            height={150}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
-                    <div className="hidden md:block absolute w-28 h-24 lg:w-28 lg:h-28 rounded-full border-4 border-white shadow-lg overflow-hidden top-[8%] right-[22%] lg:right-[24%]">
-                        <Image
-                            src="https://www.claudeusercontent.com/api/placeholder/150/150"
-                            alt="Patient in therapy"
-                            width={150}
-                            height={150}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
-                    {/* Rating bubble */}
-                    <div className="bubble-box hidden md:block absolute bg-white rounded-full py-3 px-5 shadow-md top-[45%] left-[12%] lg:left-[12%] z-10 transition-transform hover:scale-105">
-                        <div className="text-secondary font-semibold text-sm whitespace-nowrap">Rated 4.8+ by 1,000+ patients</div>
-                    </div>
-
-                    {/* Phone mockup with map */}
-                    <div className="w-[19rem] h-[20rem] md:w-64 md:h-[21rem] lg:w-[24rem] lg:h-[26rem] mx-auto relative p-3 z-10" style={{ paddingBottom: 0 }}>
-                        <Image
-                            src="/phone.png"
-                            alt="Map showing nearby facilities"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    {/* Facility card */}
-                    <div className="bubble-box-top-left hidden md:block absolute bg-white rounded-xl p-4 lg:p-5 w-52 lg:w-64 shadow-lg right-[10%] bottom-[16%] z-10 text-left transition-transform hover:scale-105">
-                        <div className="font-bold text-lg mb-2 text-gray-800">Wellness Rehab Center</div>
-                        <div className="flex items-center mb-2">
-                            <div className="text-yellow-400 mr-2 text-sm tracking-wider">★★★★<span className="opacity-50">★</span></div>
-                            <div className="text-gray-500 text-sm">2.3 mi Away</div>
-                        </div>
-                        <div className="flex gap-2 flex-wrap">
-                            <div className="bg-gray-100 px-3 py-1.5 rounded-md text-xs text-gray-600 font-medium">Physical Therapy</div>
-                            <div className="bg-gray-100 px-3 py-1.5 rounded-md text-xs text-gray-600 font-medium">Elderly Care</div>
-                        </div>
-                    </div>
-                </div>
+                <Image
+                    src="/landing-img.png"
+                    width={0}
+                    height={400}
+                    sizes="100vw"
+                    style={{ width: '100%', height: 'auto' }}
+                    alt=""
+                />
             </div>
         </section>
     );
