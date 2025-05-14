@@ -1,4 +1,5 @@
 export interface Facility {
+    imageUrl: string;
     id: string;
     name: string;
     address: string;
