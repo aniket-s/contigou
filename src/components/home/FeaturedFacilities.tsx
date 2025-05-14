@@ -13,7 +13,8 @@ const facilities: Facility[] = [
             miles: "0.50 MI"
         },
         rating: 3.5,
-        isTopRated: true
+        isTopRated: true,
+        imageUrl: ''
     },
     {
         id: 'facility-2',
@@ -24,7 +25,8 @@ const facilities: Facility[] = [
             miles: "0.60 MI"
         },
         rating: 3.0,
-        isTopRated: true
+        isTopRated: true,
+        imageUrl: ''
     },
     {
         id: 'facility-3',
@@ -35,7 +37,8 @@ const facilities: Facility[] = [
             miles: "0.60 MI"
         },
         rating: 3.5,
-        isTopRated: true
+        isTopRated: true,
+        imageUrl: ''
     },
     {
         id: 'facility-4',
@@ -46,7 +49,8 @@ const facilities: Facility[] = [
             miles: "0.60 MI"
         },
         rating: 3.5,
-        isTopRated: true
+        isTopRated: true,
+        imageUrl: ''
     }
 ];
 
