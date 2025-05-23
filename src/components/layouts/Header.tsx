@@ -34,6 +34,10 @@ export default function Header() {
         setOpenDropdowns([]);
     };
 
+    const closeSearchPanel = () => {
+        setSearchPanelOpen(false);
+    };
+
     return (
         <header className={`sticky top-0 z-50 transition-all duration-300 ${
             scrolled
@@ -69,7 +73,7 @@ export default function Header() {
                         <nav className="flex items-center space-x-6">
                             {/* Main nav links with hover underline effect */}
                             <div className="group relative">
-                                <Link href="/about" className="text-gray-700 hover:text-teal-600 py-2 relative">
+                                <Link href="/about-us" className="text-gray-700 hover:text-teal-600 py-2 relative">
                                     About us
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-500 group-hover:w-full transition-all duration-300"></span>
                                 </Link>
@@ -184,7 +188,7 @@ export default function Header() {
                 {/* Enhanced Search panel */}
                 {searchPanelOpen && (
                     <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-100 p-4 transition-all duration-300 animate-fadeDown">
-                        <SearchPanel />
+                        <SearchPanel onClose={closeSearchPanel} />
                     </div>
                 )}
 
@@ -192,7 +196,7 @@ export default function Header() {
                 {mobileMenuOpen && (
                     <div className="md:hidden py-4 border-t border-gray-200 animate-fadeDown">
                         <nav className="flex flex-col space-y-3">
-                            <Link href="/about" className="text-gray-700 hover:text-teal-600 hover:bg-teal-50 px-2 py-2 rounded-md transition-colors">
+                            <Link href="/about-us" className="text-gray-700 hover:text-teal-600 hover:bg-teal-50 px-2 py-2 rounded-md transition-colors">
                                 About us
                             </Link>
                             <Link href="/how-it-works" className="text-gray-700 hover:text-teal-600 hover:bg-teal-50 px-2 py-2 rounded-md transition-colors">

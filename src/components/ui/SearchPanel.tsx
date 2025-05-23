@@ -1,8 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function SearchPanel() {
+interface SearchPanelProps {
+    onClose?: () => void;
+}
+
+export default function SearchPanel({ onClose }: SearchPanelProps) {
     const [query, setQuery] = useState('');
     const [suggestions] = useState([
         'Rehabilitation services',
@@ -17,6 +22,7 @@ export default function SearchPanel() {
     const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const inputRef = useRef<HTMLInputElement>(null);
+    const router = useRouter();
 
     // Focus the input when the component mounts
     useEffect(() => {
@@ -48,8 +54,38 @@ export default function SearchPanel() {
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
-        // Implement actual search functionality here
-        console.log(`Searching for: ${query}`);
+
+        if (query.trim()) {
+            // Redirect to search page with query parameter
+            router.push(`/search?query=${encodeURIComponent(query.trim())}`);
+
+            // Close the search panel
+            if (onClose) {
+                onClose();
+            }
+        }
+    };
+
+    const handleSuggestionClick = (suggestion: string) => {
+        setQuery(suggestion);
+        // Redirect immediately when clicking a suggestion
+        router.push(`/search?query=${encodeURIComponent(suggestion)}`);
+
+        // Close the search panel
+        if (onClose) {
+            onClose();
+        }
+    };
+
+    const handlePopularSearchClick = (tag: string) => {
+        setQuery(tag);
+        // Redirect immediately when clicking a popular search
+        router.push(`/search?query=${encodeURIComponent(tag)}`);
+
+        // Close the search panel
+        if (onClose) {
+            onClose();
+        }
     };
 
     return (
@@ -91,10 +127,7 @@ export default function SearchPanel() {
                                 <li key={index}>
                                     <button
                                         type="button"
-                                        onClick={() => {
-                                            setQuery(suggestion);
-                                            if (inputRef.current) inputRef.current.focus();
-                                        }}
+                                        onClick={() => handleSuggestionClick(suggestion)}
                                         className="w-full text-left px-4 py-2 hover:bg-teal-50 text-gray-700 transition-colors"
                                     >
                                         {suggestion}
@@ -111,7 +144,7 @@ export default function SearchPanel() {
                 {['Find a doctor', 'Insurance', 'Locations', 'COVID-19'].map((tag, index) => (
                     <button
                         key={index}
-                        onClick={() => setQuery(tag)}
+                        onClick={() => handlePopularSearchClick(tag)}
                         className="px-3 py-1 bg-gray-100 hover:bg-teal-50 text-gray-700 hover:text-teal-600 rounded-full text-sm transition-colors"
                     >
                         {tag}

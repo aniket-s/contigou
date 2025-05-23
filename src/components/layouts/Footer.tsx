@@ -57,7 +57,7 @@ export default function Footer() {
                         <ul>
                             <FooterLink href="/">Home</FooterLink>
                             <FooterLink href="/how-it-works">How It Works</FooterLink>
-                            <FooterLink href="/about">About Us</FooterLink>
+                            <FooterLink href="/about-us">About Us</FooterLink>
                             <FooterLink href="/contact">Contact Us</FooterLink>
                             <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
                         </ul>
