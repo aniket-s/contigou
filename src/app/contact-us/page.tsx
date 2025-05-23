@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Building, HelpCircle, Send, CheckCircle, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Users, Building, HelpCircle, Send,  Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { NextPage } from 'next';
+import Image from "next/image";
 
 // Type definitions
 interface FormData {
@@ -29,11 +30,7 @@ interface FAQItem {
     question: string;
     answer: string;
 }
-
-type InquiryType = 'general' | 'patient' | 'provider' | 'facility' | 'technical' | 'feedback';
-
 const ContactUsPage: NextPage = () => {
-    const [selectedInquiry, setSelectedInquiry] = useState<InquiryType>('general');
     const [formData, setFormData] = useState<FormData>({
         firstName: '',
         lastName: '',
@@ -138,7 +135,7 @@ const ContactUsPage: NextPage = () => {
                 <div className="max-w-screen-xl mx-auto text-center text-white">
                     <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
                     <p className="text-xl mb-8 max-w-3xl mx-auto">
-                        We're here to help you find the right rehabilitation care. Our dedicated support team is available to answer your questions and guide you through the process.
+                        We&apos;re here to help you find the right rehabilitation care. Our dedicated support team is available to answer your questions and guide you through the process.
                     </p>
                     <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <div className="text-center">
@@ -166,7 +163,7 @@ const ContactUsPage: NextPage = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-6" style={{ color: '#17839c' }}>How Can We Help You?</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Choose the option that best describes your needs, and we'll connect you with the right team member.
+                            Choose the option that best describes your needs, and we&apos;ll connect you with the right team member.
                         </p>
                     </div>
 
@@ -216,7 +213,7 @@ const ContactUsPage: NextPage = () => {
                         <div>
                             <h2 className="text-3xl font-bold mb-6" style={{ color: '#17839c' }}>Send Us a Message</h2>
                             <p className="text-gray-600 mb-8">
-                                Fill out the form below and we'll get back to you within 24 hours. For urgent matters, please call our support line.
+                                Fill out the form below and we&apos;ll get back to you within 24 hours. For urgent matters, please call our support line.
                             </p>
 
                             <div className="bg-white rounded-lg shadow-md p-8">
@@ -312,7 +309,7 @@ const ContactUsPage: NextPage = () => {
                                             onChange={handleCheckboxChange}
                                         />
                                         <span className="text-sm text-gray-600">
-                      I agree to ContigoU's <a href="#" className="underline" style={{ color: '#17839c' }}>Privacy Policy</a> and consent to being contacted regarding my inquiry. *
+                      I agree to ContigoU&apos;s <a href="#" className="underline" style={{ color: '#17839c' }}>Privacy Policy</a> and consent to being contacted regarding my inquiry. *
                     </span>
                                     </label>
                                 </div>
@@ -380,10 +377,12 @@ const ContactUsPage: NextPage = () => {
                             {/* Map */}
                             <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
                                 <div className="h-64 bg-gray-200">
-                                    <img
-                                        src="/api/placeholder/600/300"
+                                    <Image
+                                        src="https://www.claudeusercontent.com/api/placeholder/600/300"
                                         alt="Office location map"
                                         className="w-full h-full object-cover"
+                                        width="600"
+                                        height="300"
                                     />
                                 </div>
                                 <div className="p-4">
@@ -431,7 +430,7 @@ const ContactUsPage: NextPage = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-6" style={{ color: '#17839c' }}>Frequently Asked Questions</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Find quick answers to common questions. If you don't see what you're looking for, don't hesitate to contact us directly.
+                            Find quick answers to common questions. If you don&apos;t see what you&apos;re looking for, don&apos;t hesitate to contact us directly.
                         </p>
                     </div>
 
@@ -460,7 +459,7 @@ const ContactUsPage: NextPage = () => {
                 <div className="max-w-screen-xl mx-auto text-center">
                     <h2 className="text-2xl font-bold mb-4 text-red-700">Emergency Situations</h2>
                     <p className="text-lg text-gray-700 mb-6">
-                        If you're experiencing a medical emergency, please call 911 immediately. ContigoU is not an emergency service and cannot provide immediate medical assistance.
+                        If you&apos;re experiencing a medical emergency, please call 911 immediately. ContigoU is not an emergency service and cannot provide immediate medical assistance.
                     </p>
                     <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto">
                         <div>

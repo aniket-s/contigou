@@ -15,6 +15,7 @@ import {
     X
 } from 'lucide-react';
 import Link from "next/link";
+import Image from "next/image";
 
 // TypeScript interfaces
 interface Facility {
@@ -246,37 +247,32 @@ const SearchResultsPage: React.FC = () => {
 
     // Filter and sort facilities
     const filteredAndSortedFacilities = useMemo(() => {
-        let filtered = allFacilities.filter(facility => {
-            // Facility type filter
+        const filtered = allFacilities.filter(facility => {
+            // Facility type
             if (filters.facilityTypes.length > 0 && !filters.facilityTypes.includes(facility.type)) {
                 return false;
             }
-
-            // Specialties filter
+            // Specialties
             if (filters.specialties.length > 0 && !filters.specialties.some(s => facility.specialties.includes(s))) {
                 return false;
             }
-
-            // Insurance filter
+            // Insurance
             if (filters.insurance.length > 0 && !filters.insurance.some(i => facility.insurance.includes(i))) {
                 return false;
             }
-
-            // Distance filter
-            const maxDistance = filters.distance === 'Within 5 miles' ? 5 :
-                filters.distance === 'Within 10 miles' ? 10 :
-                    filters.distance === 'Within 25 miles' ? 25 : 999;
+            // Distance
+            const maxDistance = filters.distance === 'Within 5 miles' ? 5
+                : filters.distance === 'Within 10 miles' ? 10
+                    : filters.distance === 'Within 25 miles' ? 25 : 999;
             if (facility.distanceValue > maxDistance) {
                 return false;
             }
-
-            // Rating filter
+            // Rating
             return !(filters.rating.length > 0 && !filters.rating.some(r => facility.rating >= r));
-
 
         });
 
-        // Sort facilities
+        // Sort
         filtered.sort((a, b) => {
             switch (sortBy) {
                 case 'distance':
@@ -287,13 +283,13 @@ const SearchResultsPage: React.FC = () => {
                     return a.costValue - b.costValue;
                 case 'specialties':
                     return b.specialties.length - a.specialties.length;
-                default: // recommended
+                default:
                     return b.rating * b.reviews - a.rating * a.reviews;
             }
         });
 
         return filtered;
-    }, [filters, sortBy]);
+    }, [filters, sortBy, allFacilities]);
 
     // Pagination
     const totalPages = Math.ceil(filteredAndSortedFacilities.length / facilitiesPerPage);
@@ -303,24 +299,47 @@ const SearchResultsPage: React.FC = () => {
     );
 
     // Filter handlers
-    const handleFilterChange = (category: keyof FilterState, value: any, checked?: boolean) => {
+    const handleFilterChange = (
+        category: keyof FilterState,
+        value: string | number,
+        checked?: boolean
+    ): void => {
         setFilters(prev => {
-            const newFilters = { ...prev };
+            const newFilters: FilterState = { ...prev };
 
             if (category === 'distance') {
-                newFilters.distance = value;
-            } else if (Array.isArray(newFilters[category])) {
-                const currentArray = newFilters[category] as any[];
-                if (checked) {
-                    newFilters[category] = [...currentArray, value] as any;
-                } else {
-                    newFilters[category] = currentArray.filter(item => item !== value) as any;
-                }
+                newFilters.distance = value as string;
+            }
+            else if (category === 'rating') {
+                // rating is number[]
+                const old = prev.rating;
+                newFilters.rating = checked
+                    ? [...old, value as number]
+                    : old.filter(r => r !== value);
+            }
+            else if (category === 'facilityTypes') {
+                const old = prev.facilityTypes;
+                newFilters.facilityTypes = checked
+                    ? [...old, value as string]
+                    : old.filter(s => s !== value);
+            }
+            else if (category === 'specialties') {
+                const old = prev.specialties;
+                newFilters.specialties = checked
+                    ? [...old, value as string]
+                    : old.filter(s => s !== value);
+            }
+            else if (category === 'insurance') {
+                const old = prev.insurance;
+                newFilters.insurance = checked
+                    ? [...old, value as string]
+                    : old.filter(i => i !== value);
             }
 
             return newFilters;
         });
-        setCurrentPage(1); // Reset to first page when filters change
+
+        setCurrentPage(1);
     };
 
     const clearAllFilters = () => {
@@ -650,7 +669,7 @@ const SearchResultsPage: React.FC = () => {
                                         <div className="flex flex-col lg:flex-row">
                                             {/* Facility image */}
                                             <div className="w-full lg:w-64 h-48 lg:h-64 shrink-0 relative">
-                                                <img
+                                                <Image
                                                     src={facility.images[0]}
                                                     alt={facility.name}
                                                     className="w-full h-full object-cover"
@@ -665,7 +684,7 @@ const SearchResultsPage: React.FC = () => {
                                                 <div className="flex flex-col sm:flex-row justify-between mb-2 gap-2">
                                                     <div className="flex-1">
                                                         <div className="flex items-center gap-3">
-                                                            <img
+                                                            <Image
                                                                 src={facility.logo}
                                                                 alt={`${facility.name} logo`}
                                                                 className="w-8 lg:w-10 h-8 lg:h-10 rounded-full object-cover"
@@ -750,7 +769,7 @@ const SearchResultsPage: React.FC = () => {
                                             <div className="hidden xl:block w-64 shrink-0 border-l">
                                                 <div className="h-full flex flex-col">
                                                     <div className="h-48 bg-gray-100 relative">
-                                                        <img
+                                                        <Image
                                                             src={facility.mapUrl}
                                                             alt={`Map location for ${facility.name}`}
                                                             className="w-full h-full object-cover"

@@ -160,7 +160,7 @@ const AboutUsPage: NextPage = () => {
                     <div className="max-w-screen-xl mx-auto text-center text-white">
                         <h1 className="text-5xl font-bold mb-6">About ContigoU</h1>
                         <p className="text-xl mb-8 max-w-3xl mx-auto">
-                            We're dedicated to making quality rehabilitation care accessible to everyone. Our mission is to connect patients with the right rehabilitation facilities, providing the information and support needed to make informed healthcare decisions.
+                            We&apos;re dedicated to making quality rehabilitation care accessible to everyone. Our mission is to connect patients with the right rehabilitation facilities, providing the information and support needed to make informed healthcare decisions.
                         </p>
                         <div className="flex justify-center space-x-6">
                             <button className="px-8 py-3 bg-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105" style={{ color: '#17839c' }}>
@@ -208,7 +208,7 @@ const AboutUsPage: NextPage = () => {
                                     At ContigoU, we believe that every patient deserves access to quality rehabilitation care. Our mission is to bridge the gap between patients and rehabilitation facilities by providing a comprehensive, easy-to-use platform that empowers informed healthcare decisions.
                                 </p>
                                 <p className="text-lg text-gray-700 mb-8">
-                                    We understand that finding the right rehabilitation facility can be overwhelming, especially during times of medical need. That's why we've created a trusted resource that simplifies the search process while maintaining the highest standards of quality and transparency.
+                                    We understand that finding the right rehabilitation facility can be overwhelming, especially during times of medical need. That&apos;s why we&apos;ve created a trusted resource that simplifies the search process while maintaining the highest standards of quality and transparency.
                                 </p>
                                 <div className="flex items-center">
                                     <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4" style={{ backgroundColor: '#17839c' }}>
@@ -234,7 +234,7 @@ const AboutUsPage: NextPage = () => {
                                     We envision a healthcare ecosystem where finding quality rehabilitation care is seamless, transparent, and accessible to all. Our goal is to become the most trusted platform for rehabilitation facility search and selection nationwide.
                                 </p>
                                 <p className="text-lg text-gray-700 mb-8">
-                                    Through technology and partnerships with leading healthcare providers, we're working to eliminate barriers to quality care and improve outcomes for patients throughout their rehabilitation journey.
+                                    Through technology and partnerships with leading healthcare providers, we&apos;re working to eliminate barriers to quality care and improve outcomes for patients throughout their rehabilitation journey.
                                 </p>
                                 <div className="space-y-4">
                                     <div className="flex items-center">
@@ -308,7 +308,7 @@ const AboutUsPage: NextPage = () => {
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold mb-6" style={{ color: '#17839c' }}>Our Journey</h2>
                             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                                From our founding to today, we've been committed to improving healthcare access and outcomes.
+                                From our founding to today, we&apos;ve been committed to improving healthcare access and outcomes.
                             </p>
                         </div>
 
@@ -378,7 +378,7 @@ const AboutUsPage: NextPage = () => {
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold mb-6" style={{ color: '#17839c' }}>How We Help</h2>
                             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                                We've streamlined the process of finding and connecting with quality rehabilitation facilities.
+                                We&apos;ve streamlined the process of finding and connecting with quality rehabilitation facilities.
                             </p>
                         </div>
 
@@ -422,7 +422,7 @@ const AboutUsPage: NextPage = () => {
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold mb-6" style={{ color: '#17839c' }}>Awards & Recognition</h2>
                             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                                We're honored to be recognized for our commitment to improving healthcare access and patient outcomes.
+                                We&apos;re honored to be recognized for our commitment to improving healthcare access and patient outcomes.
                             </p>
                         </div>
 
@@ -467,7 +467,7 @@ const AboutUsPage: NextPage = () => {
                     <div className="max-w-screen-xl mx-auto text-center text-white">
                         <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
                         <p className="text-xl mb-8 max-w-3xl mx-auto">
-                            Whether you're a patient looking for rehabilitation care or a healthcare facility interested in partnering with us, we're here to help.
+                            Whether you&apos;re a patient looking for rehabilitation care or a healthcare facility interested in partnering with us, we&apos;re here to help.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                             <button className="px-8 py-4 bg-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105" style={{ color: '#17839c' }}>

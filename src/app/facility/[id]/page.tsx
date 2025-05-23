@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { Star, MapPin, Phone, Clock, ChevronLeft, ChevronRight, Heart, ArrowLeft, Share2, Check, Mail, FileText, Calendar, Users, Award, Shield, MessageSquare, Globe } from 'lucide-react';
+import { Star, MapPin, Phone, Clock, ChevronLeft, ChevronRight, Heart, ArrowLeft, Share2, Check, Mail,  Calendar,  Award, Shield, MessageSquare, Globe } from 'lucide-react';
+import Image from "next/image";
 
 // TypeScript interfaces
 interface ReviewDetail {
@@ -378,7 +379,7 @@ const FacilityDetailPage: React.FC = () => {
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-gray-800 mb-4">Facility Not Found</h1>
-                    <p className="text-gray-600 mb-6">The facility you're looking for doesn't exist or has been removed.</p>
+                    <p className="text-gray-600 mb-6">The facility you&apos;re looking for doesn&apos;t exist or has been removed.</p>
                     <button
                         onClick={handleBackToSearch}
                         className="px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition"
@@ -418,7 +419,7 @@ const FacilityDetailPage: React.FC = () => {
                 <div className="w-full lg:w-3/5">
                     {/* Main image carousel */}
                     <div className="relative mb-4 rounded-lg overflow-hidden shadow-md">
-                        <img
+                        <Image
                             src={facilityData.images[activeSlide]}
                             alt={`${facilityData.name} view ${activeSlide + 1}`}
                             className="w-full h-64 sm:h-80 lg:h-96 object-cover"
@@ -455,7 +456,7 @@ const FacilityDetailPage: React.FC = () => {
                                 }`}
                                 style={{ borderColor: activeSlide === index ? '#17839c' : 'transparent' }}
                             >
-                                <img
+                                <Image
                                     src={img}
                                     alt={`${facilityData.name} thumbnail ${index + 1}`}
                                     className="w-16 h-10 sm:w-24 sm:h-16 object-cover"
@@ -469,7 +470,7 @@ const FacilityDetailPage: React.FC = () => {
                 <div className="w-full lg:w-2/5">
                     <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 h-full">
                         <div className="flex items-center gap-3 sm:gap-4 mb-4">
-                            <img
+                            <Image
                                 src={facilityData.logo}
                                 alt={`${facilityData.name} logo`}
                                 className="w-12 h-12 sm:w-16 sm:h-16 rounded-md object-cover"
@@ -649,7 +650,7 @@ const FacilityDetailPage: React.FC = () => {
                             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                                 <h3 className="text-lg font-semibold mb-4" style={{ color: '#17839c' }}>Location</h3>
                                 <div className="mb-4">
-                                    <img
+                                    <Image
                                         src={facilityData.mapUrl}
                                         alt="Facility location map"
                                         className="w-full h-32 sm:h-48 object-cover rounded-md mb-3"
@@ -751,7 +752,7 @@ const FacilityDetailPage: React.FC = () => {
                             {facilityData.staff.map((member, i) => (
                                 <div key={i} className="bg-white rounded-lg shadow-md p-4 sm:p-6 border border-gray-200">
                                     <div className="flex flex-col items-center text-center">
-                                        <img
+                                        <Image
                                             src={member.image}
                                             alt={member.name}
                                             className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mb-4"
